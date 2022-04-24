@@ -91,7 +91,7 @@ function createApp(database) {
     for (let row of holidays) {
       const holiday = parsePlainDate(row.holiday);
       if (
-        date &&
+        plainDate &&
         date.getFullYear() === holiday.year &&
         date.getMonth() === holiday.month - 1 &&
         date.getDate() === holiday.day
