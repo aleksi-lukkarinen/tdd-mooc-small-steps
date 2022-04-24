@@ -89,7 +89,6 @@ function createApp(database) {
   function isHoliday(date, plainDate) {
     const holidays = database.getHolidays();
     for (let row of holidays) {
-      let oldHoliday = new Date(row.holiday);
       const holiday = parsePlainDate(row.holiday);
       if (
         date &&
