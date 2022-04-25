@@ -29,6 +29,20 @@ function createApp(database) {
     }
   }
 
+
+  function c(date) {
+    if (!date) {
+      return undefined;
+    }
+
+    const plainDate =
+      date.toTemporalInstant()
+        .toZonedDateTimeISO("UTC")
+        .toPlainDate();
+
+    return plainDate;
+  }
+
   function calculateCost(age, type, date, baseCost) {
     if (type === "night") {
       return calculateCostForNightTicket(age, baseCost);
