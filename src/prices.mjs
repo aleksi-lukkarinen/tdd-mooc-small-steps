@@ -101,7 +101,7 @@ function createApp(database) {
         c(date) &&
         c(date).year === c(holiday).year &&
         c(date).month === c(holiday).month &&
-        date.getDate() === holiday.getDate()
+        c(date).day === c(holiday).day
       ) {
         return true;
       }
