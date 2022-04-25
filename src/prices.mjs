@@ -98,4 +98,10 @@ function createApp(database) {
   return app;
 }
 
+function c(d) {
+  return d.toTemporalInstant()
+              .toZonedDateTimeISO("UTC")
+              .toPlainDate();
+}
+
 export { createApp };
