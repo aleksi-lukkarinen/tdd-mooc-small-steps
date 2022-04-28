@@ -6,7 +6,7 @@ import express from "express";
 
 function c(oldDate) {
   if (!oldDate) {
-    return nothing;
+    return undefined;
   }
 
   const plainDate = oldDate
